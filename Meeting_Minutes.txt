@@ -1,0 +1,14 @@
+Aug 24 2016
+1. Existing works construct software graphs based on function call or class relationship. Several metrics are applied to measure the quality of software, such as modularity and clustering coefficient [1,2,3]. We can study if the traditional metrics can be used in our variational software graph.
+2. Another direction of the graph-based analysis method is for software prediction. For example, based on currently software evolution process, we can predict possible software quality or possible maintenance effort of the coming software version [4]. One work [5] tries to model the software evolution process, and then use the model to forecast the future trends of software. We can consider the similar way to build the evolution model of variational software, and use the model to predict the future variability of  software.
+3. Currently, we only do some experiments on the driver part of linux kernel. We can investigate if the graph properties of other parts (eg. fs, mm or kernel core) are different. 
+4. Current problems: (a) what are the unique properties of variational software that we are interesting in. For example, the software variability. How can we measure such property of software. (b) is the current variational software graph proper for variability study? We only give edge weight based on number of #ifdef of function call, but we do not consider the number of #ifdef of functions. However, it seems like functions with more #ifdef play more important rule in software variability.
+5. Fixed null pointer dereference bugs in kernel can be found by using git, and then we look into those fixes and try to see if there has any pattern can be learned. So we can use the learned pattern to detect the possible NPD bugs. (I think we could have a doc to record how the NPD bugs are fixed.)
+6. Use the excel to record the haskell error patterns.
+Reference:
+1.Myers C R. Software systems as complex networks: Structure, function, and evolvability of software collaboration graphs[J]. Physical Review E, 2003, 68(4): 046116.
+2.Hierarchical Small-Worlds in Software Architecture[J]. IEEE Transactions on Software Engineering, 2003
+3.Šubelj L, Bajec M. Community structure of complex software systems: Analysis and applications[J]. Physica A: Statistical Mechanics and its Applications, 2011, 390(16): 2968-2975.
+4.Bhattacharya P, Iliofotou M, Neamtiu I, et al. Graph-based analysis and prediction for software evolution[C]//Proceedings of the 34th International Conference on Software Engineering. IEEE Press, 2012: 419-429.
+5.Chaikalis T, Chatzigeorgiou A. Forecasting Java Software Evolution Trends employing Network Models[J]. IEEE Transactions on Software Engineering, 2015, 41(6): 582-602.
+
